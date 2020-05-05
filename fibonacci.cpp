@@ -3,7 +3,7 @@ using namespace std;
 vector<int>records;
 int f;
 int fibbonacci(int n){
-    //Using a memorization table you can reduse the complexity of your recursive algorithms
+    //Using a memorization table you can minimize the complexity of your recursive algorithms
     if (n>1 && n <= records.size()) f = records[n];
     if(n == 0) f = 0;
     else if(n == 1) f = 1;
@@ -13,7 +13,11 @@ int fibbonacci(int n){
 }
 int main(){
     int n;
-    cin >> n;
+    cout << "Fibonacci Algorithm" << endl
+    do{
+        cout << "Enter the position (Max 30): ";
+        cin >> n;
+    }while(n < 0 || n > 40);
     for(int i = 0; i <= n; i++) cout << fibbonacci(i) << " ";
     return 0;
 }
