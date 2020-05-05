@@ -21,7 +21,7 @@ void main() {
     do{
         printf("Towers of Hanoi classic algorithm behavior with A, B & C as the 3 towers\nEnter the number of disks (max 10): ");
         scanf("%d", &n);
-    } while (n < 0 || n > 10);
+    } while (n <= 0 || n > 10);
     towersofhanoi(n, 'A', 'C', 'B', &moves);
     printf("\nTotal moves: %d", moves);
 }
